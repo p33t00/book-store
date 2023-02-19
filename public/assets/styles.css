@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@300;500;700&display=swap');
+
+h1,h2,h3,h4,h5,h6,p  {
+  font-family: 'Dosis', sans-serif;
+}
+
+body {
+  background-image: url('../img/bg-2331x1322-s.jpg');
+  background-size: 100% 100%;
+  background-attachment: fixed;
+}
+
+main {
+  background-color: rgba(0, 0, 0, 0.5);
+  min-height: 100vh;
+}
+
+@media (max-width: 400px) {
+  .navbar {
+    padding-left: 0;
+  }
+}
+.nav-item label{
+  display: inline-block;
+  color: grey;
+}
+
+.navbar-toggler {
+  width: 55px;
+}
+
+.navbar-brand {
+  text-align: start;
+  margin-left: 10%;
+}
+
+.btn-circle {
+  min-width: 50px;
+  max-width: 200px;
+  border-radius: 25px;
+}
+
+
+/*Shopping Card*/
+
+#shopping-list .img-thumbnail {
+  width: 45px;
+}

@@ -2,13 +2,223 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <link rel="stylesheet" href="./style.css" />
+    <link rel="icon" type="image/svg+xml" href="/img/favicon.ico" />
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./public/assets/styles.css" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Book Store</title>
   </head>
-  <body>
-    <div id="app"></div>
-    <script type="module" src="/main.js"></script>
+  <body class="pt-5">
+    <main class="container text-center py-4">
+      <nav class="navbar navbar-dark fixed-top navbar-expand-lg bg-dark bg-gradient">
+        <div class="container-fluid px-4">
+          <button class="btn btn-outline-success btn-circle col-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
+            <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+          </svg>
+          </button>
+          <span class="navbar-brand col">Pete's Shelf</span>
+          <button class="navbar-toggler col-2" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <label for="category" class="nav-link">Category:</label>
+                <select id="category">
+                  <option value="all">All</option>
+                  <option value="css">CSS</option>
+                  <option value="html">HTML</option>
+                  <option value="js">JavaScript</option>
+                </select>
+              </li>
+              <li class="nav-item">
+                <label for="category" class="nav-link">Sort:</label>
+                <select id="category">
+                  <option value="title">Title</option>
+                  <option value="author">Author</option>
+                  <option value="price">Price</option>
+                </select>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+      <div class="row justify-content-center gy-md-5 gy-3">
+        <div class="card col-auto mx-auto p-0 border border-0" style="width: 18rem;">
+          <img src="./public/img/book.jpeg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">$19.55</li>
+          </ul>
+          <div class="card-body">
+            <a href="#" class="card-link">Card link</a>
+            <a href="#" class="card-link">Another link</a>
+          </div>
+        </div>
+        <div class="card col-auto mx-auto p-0 border border-0" style="width: 18rem;">
+          <img src="./public/img/book.jpeg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">$19.55</li>
+          </ul>
+          <div class="card-body">
+            <a href="#" class="card-link">Card link</a>
+            <a href="#" class="card-link">Another link</a>
+          </div>
+        </div>
+        <div class="card col-auto mx-auto p-0 border border-0" style="width: 18rem;">
+          <img src="./public/img/book.jpeg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">$19.55</li>
+          </ul>
+          <div class="card-body">
+            <a href="#" class="card-link">Card link</a>
+            <a href="#" class="card-link">Another link</a>
+          </div>
+        </div>
+        <div class="card col-auto mx-auto p-0 border border-0" style="width: 18rem;">
+          <img src="./public/img/book.jpeg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">$19.55</li>
+          </ul>
+          <div class="card-body">
+            <a href="#" class="card-link">Card link</a>
+            <a href="#" class="card-link">Another link</a>
+          </div>
+        </div>
+        <div class="card col-auto mx-auto p-0 border border-0" style="width: 18rem;">
+          <img src="./public/img/book.jpeg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">$19.55</li>
+          </ul>
+          <div class="card-body">
+            <a href="#" class="card-link">Card link</a>
+            <a href="#" class="card-link">Another link</a>
+          </div>
+        </div>
+        <div class="card col-auto mx-auto p-0 border border-0" style="width: 18rem;">
+          <img src="./public/img/book.jpeg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">$19.55</li>
+          </ul>
+          <div class="card-body">
+            <a href="#" class="card-link">Card link</a>
+            <a href="#" class="card-link">Another link</a>
+          </div>
+        </div>
+        <div class="card col-auto mx-auto p-0 border border-0" style="width: 18rem;">
+          <img src="./public/img/book.jpeg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">$19.55</li>
+          </ul>
+          <div class="card-body">
+            <a href="#" class="card-link">Card link</a>
+            <a href="#" class="card-link">Another link</a>
+          </div>
+        </div>
+        <div class="card col-auto mx-auto p-0 border border-0" style="width: 18rem;">
+          <img src="./public/img/book.jpeg" class="card-img-top" alt="...">
+          <div class="card-body">
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+          </div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">$19.55</li>
+          </ul>
+          <div class="card-body">
+            <a href="#" class="card-link">Card link</a>
+            <a href="#" class="card-link">Another link</a>
+          </div>
+        </div>
+      </div>
+      <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+        <div class="offcanvas-header bg-dark bg-gradient">
+          <h5 class="offcanvas-title text-white" id="offcanvasRightLabel">Shopping List:</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body  p-0">
+          <p>Total: $120</p>
+          <p>Quantity: 5</p>
+          <hr>
+          <hr>
+          <ul id="shopping-list" class="list-group list-group-flush px-3">
+            <li class="list-group-item d-flex justify-content-between align-items-center"><img src="./public/img/book.jpeg" class="img-thumbnail" alt="...">An item<span class="badge bg-danger rounded-pill">X</span>
+          </li>
+          <li class="list-group-item d-flex justify-content-between align-items-center">
+            <input class="form-check-input me-1" type="checkbox" value="" id="firstCheckboxStretched">
+            <label class="form-check-label stretched-link" for="firstCheckboxStretched">First checkbox<span class="badge bg-danger rounded-pill">X</span></label>
+          </li>
+          <li class="list-group-item d-flex justify-content-between align-items-center">
+            <img src="./public/img/book.jpeg" class="img-thumbnail" alt="...">An item<span class="badge bg-danger rounded-pill">X</span>
+          </li>
+          <li class="list-group-item d-flex justify-content-between align-items-center">
+            <img src="./public/img/book.jpeg" class="img-thumbnail" alt="...">An item<span class="badge bg-danger rounded-pill">X</span>
+          </li>
+          <li class="list-group-item d-flex justify-content-between align-items-center">
+            <img src="./public/img/book.jpeg" class="img-thumbnail" alt="...">An item<span class="badge bg-danger rounded-pill">X</span>
+          </li>
+          <li class="list-group-item d-flex justify-content-between align-items-center">
+            <img src="./public/img/book.jpeg" class="img-thumbnail" alt="...">An item<span class="badge bg-danger rounded-pill">X</span>
+          </li>
+          <li class="list-group-item d-flex justify-content-between align-items-center">
+            <img src="./public/img/book.jpeg" class="img-thumbnail" alt="...">An item<span class="badge bg-danger rounded-pill">X</span>
+          </li>
+          <li class="list-group-item d-flex justify-content-between align-items-center">
+            <img src="./public/img/book.jpeg" class="img-thumbnail" alt="...">An item<span class="badge bg-danger rounded-pill">X</span>
+          </li>
+          <li class="list-group-item d-flex justify-content-between align-items-center">
+            <img src="./public/img/book.jpeg" class="img-thumbnail" alt="...">An item<span class="badge bg-danger rounded-pill">X</span>
+          </li>
+          <li class="list-group-item d-flex justify-content-between align-items-center">
+            <img src="./public/img/book.jpeg" class="img-thumbnail" alt="...">An item<span class="badge bg-danger rounded-pill">X</span>
+          </li>
+          <li class="list-group-item d-flex justify-content-between align-items-center">
+            <img src="./public/img/book.jpeg" class="img-thumbnail" alt="...">An item<span class="badge bg-danger rounded-pill">X</span>
+          </li>
+          <li class="list-group-item d-flex justify-content-between align-items-center">
+            <img src="./public/img/book.jpeg" class="img-thumbnail" alt="...">An item<span class="badge bg-danger rounded-pill">X</span>
+          </li>
+          <li class="list-group-item d-flex justify-content-between align-items-center">
+            <img src="./public/img/book.jpeg" class="img-thumbnail" alt="...">An item<span class="badge bg-danger rounded-pill">X</span>
+          </li>
+          <li class="list-group-item d-flex justify-content-between align-items-center">
+            <img src="./public/img/book.jpeg" class="img-thumbnail" alt="...">An item<span class="badge bg-danger rounded-pill">X</span>
+          </li>
+          <li class="list-group-item d-flex justify-content-between align-items-center">
+            <img src="./public/img/book.jpeg" class="img-thumbnail" alt="...">An item<span class="badge bg-danger rounded-pill">X</span>
+          </li>
+          <li class="list-group-item d-flex justify-content-between align-items-center">
+            <img src="./public/img/book.jpeg" class="img-thumbnail" alt="...">An item<span class="badge bg-danger rounded-pill">X</span>
+          </li>
+          <li class="list-group-item d-flex justify-content-between align-items-center">
+            <img src="./public/img/book.jpeg" class="img-thumbnail" alt="...">A Last item<span class="badge bg-danger rounded-pill">X</span>
+          </li>
+        </ul>
+        <div class="sticky-bottom bg-dark bg-gradient py-3">
+          <button class="btn btn-primary">Order</button>
+          <button class="btn btn-danger">Remove All</button>
+        </div>
+      </div>
+    </main>
+    <script type="module" src="./public/assets/main.js"></script>
   </body>
 </html>
