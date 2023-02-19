@@ -41,8 +41,16 @@ main {
 }
 
 
-/*Shopping Card*/
+/* Shopping Card */
 
 #shopping-list .img-thumbnail {
   width: 45px;
+}
+
+
+/* Single book */
+
+.modal-body .card-img-top{
+  width: 60%;
+  margin: auto;
 }
