@@ -62,8 +62,38 @@ main {
 
 /* Shopping Card */
 
+#shopping-list h5 {
+  margin-bottom: 10px;
+}
+
+#shopping-list ul li {
+  list-style: none;
+}
+
+#shopping-list .book-details-grp ul {
+  max-width: 255px;
+}
+
+#shopping-list .badge{
+  cursor: pointer;
+  margin-left: 5px;
+  min-width: 25px;
+}
+
 #shopping-list .img-thumbnail {
   width: 45px;
+}
+
+.book-details-grp {
+  overflow: hidden;
+}
+
+.fixed-bottom {
+  max-width: 400px;
+}
+
+.offcanvas-body {
+  margin-bottom: 80px;
 }
 
 
