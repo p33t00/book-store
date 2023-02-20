@@ -88,6 +88,9 @@ main {
   overflow: hidden;
 }
 
+.fixed-bottom {
+  max-width: 400px;
+}
 
 /* Single book */
 
