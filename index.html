@@ -12,7 +12,7 @@
     <main class="container text-center py-4">
       <nav class="navbar navbar-dark fixed-top navbar-expand-lg bg-dark bg-gradient">
         <div class="container-fluid px-4">
-          <button class="btn btn-outline-success btn-circle col-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
+          <button class="btn btn-outline-success col-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasRight" aria-controls="offcanvasRight">
           <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-cart" viewBox="0 0 16 16">
             <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .491.592l-1.5 8A.5.5 0 0 1 13 12H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5zM3.102 4l1.313 7h8.17l1.313-7H3.102zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4zm-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
           </svg>
@@ -44,144 +44,156 @@
           </div>
         </div>
       </nav>
+      <!-- Main Container -->
       <div class="row justify-content-center gy-md-5 gy-3">
-        <div class="card col-auto mx-auto p-0 border border-0" style="width: 18rem;">
+        <!-- Item List -->
+        <div class="item-list-card card col-auto mx-auto p-0 border border-0">
           <img src="./public/img/book.jpeg" class="card-img-top" data-bs-toggle="modal" data-bs-target="#staticBackdrop" alt="...">
-          <div class="card-body">
-            <p class="card-text">This is working Card. With on the card title and make up the bulk of the card's content.</p>
-          </div>
           <ul class="list-group list-group-flush">
-            <li class="list-group-item">$19.55</li>
+            <li class="list-group-item">Author: <span>Jan Pier Bountie Jan Pier Bountie Jan Pier Bountie</span></li>
+            <li class="list-group-item">Category: <span>CSS</span></li>
           </ul>
-          <div class="card-body">
-            <a href="#" class="card-link">Card link</a>
-            <a href="#" class="card-link">Another link</a>
+          <div class="pb-2">
+            <button class="btn btn-outline-success col-2" type="button">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-cart-plus" viewBox="0 0 16 16">
+                <path d="M9 5.5a.5.5 0 0 0-1 0V7H6.5a.5.5 0 0 0 0 1H8v1.5a.5.5 0 0 0 1 0V8h1.5a.5.5 0 0 0 0-1H9V5.5z"/>
+                <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zm3.915 10L3.102 4h10.796l-1.313 7h-8.17zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
+              </svg>
+            </button>
+            <span>$ 19.75</span>
           </div>
         </div>
-        <div class="card col-auto mx-auto p-0 border border-0" style="width: 18rem;">
-          <img src="./public/img/book.jpeg" class="card-img-top" alt="...">
-          <div class="card-body">
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          </div>
+        <div class="item-list-card card col-auto mx-auto p-0 border border-0">
+          <img src="./public/img/book.jpeg" class="card-img-top" data-bs-toggle="modal" data-bs-target="#staticBackdrop" alt="...">
           <ul class="list-group list-group-flush">
-            <li class="list-group-item">$19.55</li>
+            <li class="list-group-item">Author: <span>Jan Pier Bountie Jan Pier Bountie Jan Pier Bountie</span></li>
+            <li class="list-group-item">Category: <span>CSS</span></li>
           </ul>
-          <div class="card-body">
-            <a href="#" class="card-link">Card link</a>
-            <a href="#" class="card-link">Another link</a>
+          <div class="pb-2">
+            <button class="btn btn-outline-success col-2" type="button">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-cart-plus" viewBox="0 0 16 16">
+                <path d="M9 5.5a.5.5 0 0 0-1 0V7H6.5a.5.5 0 0 0 0 1H8v1.5a.5.5 0 0 0 1 0V8h1.5a.5.5 0 0 0 0-1H9V5.5z"/>
+                <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zm3.915 10L3.102 4h10.796l-1.313 7h-8.17zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
+              </svg>
+            </button>
+            <span>$ 19.75</span>
           </div>
         </div>
-        <div class="card col-auto mx-auto p-0 border border-0" style="width: 18rem;">
-          <img src="./public/img/book.jpeg" class="card-img-top" alt="...">
-          <div class="card-body">
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          </div>
+        <div class="item-list-card card col-auto mx-auto p-0 border border-0">
+          <img src="./public/img/book.jpeg" class="card-img-top" data-bs-toggle="modal" data-bs-target="#staticBackdrop" alt="...">
           <ul class="list-group list-group-flush">
-            <li class="list-group-item">$19.55</li>
+            <li class="list-group-item">Author: <span>Jan Pier Bountie Jan Pier Bountie Jan Pier Bountie</span></li>
+            <li class="list-group-item">Category: <span>CSS</span></li>
           </ul>
-          <div class="card-body">
-            <a href="#" class="card-link">Card link</a>
-            <a href="#" class="card-link">Another link</a>
+          <div class="pb-2">
+            <button class="btn btn-outline-success col-2" type="button">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-cart-plus" viewBox="0 0 16 16">
+                <path d="M9 5.5a.5.5 0 0 0-1 0V7H6.5a.5.5 0 0 0 0 1H8v1.5a.5.5 0 0 0 1 0V8h1.5a.5.5 0 0 0 0-1H9V5.5z"/>
+                <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zm3.915 10L3.102 4h10.796l-1.313 7h-8.17zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
+              </svg>
+            </button>
+            <span>$ 19.75</span>
           </div>
         </div>
-        <div class="card col-auto mx-auto p-0 border border-0" style="width: 18rem;">
-          <img src="./public/img/book.jpeg" class="card-img-top" alt="...">
-          <div class="card-body">
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          </div>
+        <div class="item-list-card card col-auto mx-auto p-0 border border-0">
+          <img src="./public/img/book.jpeg" class="card-img-top" data-bs-toggle="modal" data-bs-target="#staticBackdrop" alt="...">
           <ul class="list-group list-group-flush">
-            <li class="list-group-item">$19.55</li>
+            <li class="list-group-item">Author: <span>Jan Pier Bountie Jan Pier Bountie Jan Pier Bountie</span></li>
+            <li class="list-group-item">Category: <span>CSS</span></li>
           </ul>
-          <div class="card-body">
-            <a href="#" class="card-link">Card link</a>
-            <a href="#" class="card-link">Another link</a>
+          <div class="pb-2">
+            <button class="btn btn-outline-success col-2" type="button">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-cart-plus" viewBox="0 0 16 16">
+                <path d="M9 5.5a.5.5 0 0 0-1 0V7H6.5a.5.5 0 0 0 0 1H8v1.5a.5.5 0 0 0 1 0V8h1.5a.5.5 0 0 0 0-1H9V5.5z"/>
+                <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zm3.915 10L3.102 4h10.796l-1.313 7h-8.17zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
+              </svg>
+            </button>
+            <span>$ 19.75</span>
           </div>
         </div>
-        <div class="card col-auto mx-auto p-0 border border-0" style="width: 18rem;">
-          <img src="./public/img/book.jpeg" class="card-img-top" alt="...">
-          <div class="card-body">
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          </div>
+        <div class="item-list-card card col-auto mx-auto p-0 border border-0">
+          <img src="./public/img/book.jpeg" class="card-img-top" data-bs-toggle="modal" data-bs-target="#staticBackdrop" alt="...">
           <ul class="list-group list-group-flush">
-            <li class="list-group-item">$19.55</li>
+            <li class="list-group-item">Author: <span>Jan Pier Bountie Jan Pier Bountie Jan Pier Bountie</span></li>
+            <li class="list-group-item">Category: <span>CSS</span></li>
           </ul>
-          <div class="card-body">
-            <a href="#" class="card-link">Card link</a>
-            <a href="#" class="card-link">Another link</a>
+          <div class="pb-2">
+            <button class="btn btn-outline-success col-2" type="button">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-cart-plus" viewBox="0 0 16 16">
+                <path d="M9 5.5a.5.5 0 0 0-1 0V7H6.5a.5.5 0 0 0 0 1H8v1.5a.5.5 0 0 0 1 0V8h1.5a.5.5 0 0 0 0-1H9V5.5z"/>
+                <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zm3.915 10L3.102 4h10.796l-1.313 7h-8.17zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
+              </svg>
+            </button>
+            <span>$ 19.75</span>
           </div>
         </div>
-        <div class="card col-auto mx-auto p-0 border border-0" style="width: 18rem;">
-          <img src="./public/img/book.jpeg" class="card-img-top" alt="...">
-          <div class="card-body">
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          </div>
+        <div class="item-list-card card col-auto mx-auto p-0 border border-0">
+          <img src="./public/img/book.jpeg" class="card-img-top" data-bs-toggle="modal" data-bs-target="#staticBackdrop" alt="...">
           <ul class="list-group list-group-flush">
-            <li class="list-group-item">$19.55</li>
+            <li class="list-group-item">Author: <span>Jan Pier Bountie Jan Pier Bountie Jan Pier Bountie</span></li>
+            <li class="list-group-item">Category: <span>CSS</span></li>
           </ul>
-          <div class="card-body">
-            <a href="#" class="card-link">Card link</a>
-            <a href="#" class="card-link">Another link</a>
+          <div class="pb-2">
+            <button class="btn btn-outline-success col-2" type="button">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-cart-plus" viewBox="0 0 16 16">
+                <path d="M9 5.5a.5.5 0 0 0-1 0V7H6.5a.5.5 0 0 0 0 1H8v1.5a.5.5 0 0 0 1 0V8h1.5a.5.5 0 0 0 0-1H9V5.5z"/>
+                <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zm3.915 10L3.102 4h10.796l-1.313 7h-8.17zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
+              </svg>
+            </button>
+            <span>$ 19.75</span>
           </div>
         </div>
-        <div class="card col-auto mx-auto p-0 border border-0" style="width: 18rem;">
-          <img src="./public/img/book.jpeg" class="card-img-top" alt="...">
-          <div class="card-body">
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          </div>
+        <div class="item-list-card card col-auto mx-auto p-0 border border-0">
+          <img src="./public/img/book.jpeg" class="card-img-top" data-bs-toggle="modal" data-bs-target="#staticBackdrop" alt="...">
           <ul class="list-group list-group-flush">
-            <li class="list-group-item">$19.55</li>
+            <li class="list-group-item">Author: <span>Jan Pier Bountie Jan Pier Bountie Jan Pier Bountie</span></li>
+            <li class="list-group-item">Category: <span>CSS</span></li>
           </ul>
-          <div class="card-body">
-            <a href="#" class="card-link">Card link</a>
-            <a href="#" class="card-link">Another link</a>
+          <div class="pb-2">
+            <button class="btn btn-outline-success col-2" type="button">
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-cart-plus" viewBox="0 0 16 16">
+                <path d="M9 5.5a.5.5 0 0 0-1 0V7H6.5a.5.5 0 0 0 0 1H8v1.5a.5.5 0 0 0 1 0V8h1.5a.5.5 0 0 0 0-1H9V5.5z"/>
+                <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zm3.915 10L3.102 4h10.796l-1.313 7h-8.17zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
+              </svg>
+            </button>
+            <span>$ 19.75</span>
           </div>
         </div>
-        <div class="card col-auto mx-auto p-0 border border-0" style="width: 18rem;">
-          <img src="./public/img/book.jpeg" class="card-img-top" alt="...">
-          <div class="card-body">
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-          </div>
-          <ul class="list-group list-group-flush">
-            <li class="list-group-item">$19.55</li>
-          </ul>
-          <div class="card-body">
-            <a href="#" class="card-link">Card link</a>
-            <a href="#" class="card-link">Another link</a>
-          </div>
+        
         </div>
+        <!-- Single Item Modal -->
         <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="true" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
           <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h1 class="modal-title fs-5" id="staticBackdropLabel">Modal title</h1>
+            <div id="single-item-modal" class="modal-content">
+              <div class="modal-header border border-0">
+                <h1 class="modal-title" id="staticBackdropLabel">$ 12.75</h1>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
               </div>
-              <div class="modal-body card">
-                <!-- <div class="card" style="width: 18rem;"> -->
+              <div class="modal-body card border border-0 py-0 text-start">
                 <img src="./public/img/book.jpeg" class="card-img-top" alt="...">
                 <div class="card-body">
-                  <h5 class="card-title">Card title</h5>
+                  <h5 class="card-title">CSS For beginners.</h5>
                   <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                 </div>
                 <ul class="list-group list-group-flush">
-                  <li class="list-group-item">An item</li>
-                  <li class="list-group-item">A second item</li>
-                  <li class="list-group-item">A third item</li>
+                  <li class="list-group-item">Author: <span>Jan Pier Bountie</span></li>
+                  <li class="list-group-item">Category: <span>CSS</span></li>
                 </ul>
-                <div class="card-body">
-                  <a href="#" class="card-link">Card link</a>
-                  <a href="#" class="card-link">Another link</a>
-                </div>
-                <!-- </div> -->
               </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Understood</button>
+              <div class="modal-footer justify-content-between border border-0">
+                <button class="btn btn-outline-success col-2" type="button">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-cart-plus" viewBox="0 0 16 16">
+                    <path d="M9 5.5a.5.5 0 0 0-1 0V7H6.5a.5.5 0 0 0 0 1H8v1.5a.5.5 0 0 0 1 0V8h1.5a.5.5 0 0 0 0-1H9V5.5z"/>
+                    <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zm3.915 10L3.102 4h10.796l-1.313 7h-8.17zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
+                  </svg>
+                </button>
+                <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Close</button>
               </div>
             </div>
           </div>
         </div>
       </div>
+      <!-- Shopping card -->
       <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
         <div class="offcanvas-header bg-dark bg-gradient">
           <h5 class="offcanvas-title text-white" id="offcanvasRightLabel">Shopping List:</h5>
@@ -193,8 +205,10 @@
           <hr>
           <hr>
           <ul id="shopping-list" class="list-group list-group-flush px-3">
-            <li class="list-group-item d-flex justify-content-between align-items-center"><img src="./public/img/book.jpeg" class="img-thumbnail" alt="...">An item<span class="badge bg-danger rounded-pill">X</span>
-          </li>
+            <li class="list-group-item d-flex justify-content-between align-items-center">
+              <img src="./public/img/book.jpeg" class="img-thumbnail" alt="...">An item<span class="badge bg-danger rounded-pill">X</span>
+            </li>
+
           <li class="list-group-item d-flex justify-content-between align-items-center">
             <input class="form-check-input me-1" type="checkbox" value="" id="firstCheckboxStretched">
             <label class="form-check-label stretched-link" for="firstCheckboxStretched">First checkbox<span class="badge bg-danger rounded-pill">X</span></label>
