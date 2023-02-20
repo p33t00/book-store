@@ -1,18 +1,182 @@
 [
   {
     "id": 1,
-    "title": "Book title",
+    "title": "CSS For Beginners. Learn to tweak your website design",
     "author": "Some Author",
-    "description": "Lorem ipsum / or your text",
-    "category": "UX",
-    "price": 150
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    "category": "CSS",
+    "price": 15.45,
+    "img": "https://i0.wp.com/sherrylwilson.com/wp-content/uploads/2016/01/HTML-Quickstart-Guide-Book-Review.jpg?resize=487%2C598&ssl=1"
   },
   {
     "id": 2,
-    "title": "222 Book title",
+    "title": "HTML quickstart guide. The simplified beginner's guide to HTML",
     "author": "Another Author",
-    "description": "Lorem ipsum / or your text",
-    "category": "XU",
-    "price": 1800
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
+    "category": "HTML",
+    "price": 18.99,
+    "img": "https://cssdeck.com/blog/wp-content/uploads/2015/03/must-read-html-css-books.jpg"
   },
+  {
+    "id": 3,
+    "title": "222 Book title",
+    "author": "More of Authors",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+    "category": "JavaScript",
+    "price": 28.50,
+    "img": ""
+  },
+  {
+    "id": 4,
+    "title": "222 Book title",
+    "author": "Great Author",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "category": "XU",
+    "price": 25.50,
+    "img": ""
+  },
+  {
+    "id": 5,
+    "title": "CSS For Beginners. Learn to tweak your website design",
+    "author": "Some Author",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    "category": "CSS",
+    "price": 15.45,
+    "img": "https://ketab.pk/wp-content/uploads/2021/05/IMG-20210525-WA0034-768x1030.jpg"
+  },
+  {
+    "id": 6,
+    "title": "HTML quickstart guide. The simplified beginner's guide to HTML",
+    "author": "Another Author",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
+    "category": "HTML",
+    "price": 18.99,
+    "img": ""
+  },
+  {
+    "id": 7,
+    "title": "222 Book title",
+    "author": "More of Authors",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+    "category": "JavaScript",
+    "price": 28.50,
+    "img": ""
+  },
+  {
+    "id": 8,
+    "title": "222 Book title",
+    "author": "Great Author",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "category": "XU",
+    "price": 25.50,
+    "img": ""
+  },
+  {
+    "id": 9,
+    "title": "CSS For Beginners. Learn to tweak your website design",
+    "author": "Some Author",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    "category": "CSS",
+    "price": 15.45,
+    "img": "https://i0.wp.com/sherrylwilson.com/wp-content/uploads/2016/01/HTML-Quickstart-Guide-Book-Review.jpg?resize=487%2C598&ssl=1"
+  },
+  {
+    "id": 10,
+    "title": "HTML quickstart guide. The simplified beginner's guide to HTML",
+    "author": "Another Author",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
+    "category": "HTML",
+    "price": 18.99,
+    "img": "https://uploads-ssl.webflow.com/5f280c5b57d2edfcbbb057ea/60733555a7e371cfccf76927_51aYhJ4seCL.jpeg"
+  },
+  {
+    "id": 11,
+    "title": "222 Book title",
+    "author": "More of Authors",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+    "category": "JavaScript",
+    "price": 28.50,
+    "img": ""
+  },
+  {
+    "id": 12,
+    "title": "222 Book title",
+    "author": "Great Author",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "category": "XU",
+    "price": 25.50,
+    "img": ""
+  },
+  {
+    "id": 13,
+    "title": "CSS For Beginners. Learn to tweak your website design",
+    "author": "Some Author",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    "category": "CSS",
+    "price": 15.45,
+    "img": "https://images-na.ssl-images-amazon.com/images/I/414zYx1SEoL.jpg"
+  },
+  {
+    "id": 14,
+    "title": "HTML quickstart guide. The simplified beginner's guide to HTML",
+    "author": "Another Author",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
+    "category": "HTML",
+    "price": 18.99,
+    "img": "https://trickbugs.com/wp-content/uploads/2017/05/842e9b3892002f6a4e17112232b56491-699x1081.png"
+  },
+  {
+    "id": 15,
+    "title": "222 Book title",
+    "author": "More of Authors",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+    "category": "JavaScript",
+    "price": 28.50,
+    "img": ""
+  },
+  {
+    "id": 16,
+    "title": "222 Book title",
+    "author": "Great Author",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "category": "XU",
+    "price": 25.50,
+    "img": ""
+  },
+  {
+    "id": 17,
+    "title": "CSS For Beginners. Learn to tweak your website design",
+    "author": "Some Author",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    "category": "CSS",
+    "price": 15.45,
+    "img": "https://cssdeck.com/blog/wp-content/uploads/2015/03/must-read-html-css-books9.jpg"
+  },
+  {
+    "id": 18,
+    "title": "HTML quickstart guide. The simplified beginner's guide to HTML",
+    "author": "Another Author",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
+    "category": "HTML",
+    "price": 18.99,
+    "img": "https://s.tmimgcdn.com/blog/wp-content/uploads/2011/01/Pro-HTML5-Programming-Powerful-APIs-for-Richer-Internet-Application-Development.jpg?x54449"
+  },
+  {
+    "id": 19,
+    "title": "222 Book title",
+    "author": "More of Authors",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+    "category": "JavaScript",
+    "price": 28.50,
+    "img": ""
+  },
+  {
+    "id": 20,
+    "title": "222 Book title",
+    "author": "Great Author",
+    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "category": "XU",
+    "price": 25.50,
+    "img": ""
+  }
 ]
