@@ -20,6 +20,7 @@ main {
     padding-left: 0;
   }
 }
+
 .nav-item label{
   display: inline-block;
   color: grey;
@@ -34,15 +35,54 @@ main {
   margin-left: 10%;
 }
 
-.btn-circle {
+.btn {
   min-width: 50px;
   max-width: 200px;
   border-radius: 25px;
 }
 
+/* Item List */
 
-/*Shopping Card*/
+.card {
+  --bs-card-spacer-y: 0;
+}
+
+.item-list-card {
+  width: 18rem;
+}
+
+.item-list-card .card-img-top {
+  cursor: pointer;
+}
+
+.item-list-card .btn-outline-success {
+  margin-right: 60px;
+}
+
+
+/* Shopping Card */
 
 #shopping-list .img-thumbnail {
   width: 45px;
+}
+
+
+/* Single book */
+
+#single-item-modal .modal-body .card-img-top{
+  width: 60%;
+  margin: 0 auto 20px;
+}
+
+#single-item-modal .modal-title {
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+#single-item-modal .btn-close {
+  margin: 0;
+}
+
+#single-item-modal .card-title {
+  font-weight: bold;
 }
