@@ -4,6 +4,9 @@ h1,h2,h3,h4,h5,h6,p,span  {
   font-family: 'Roboto', sans-serif;
 }
 
+/* jumble all elements into a single button */
+button * {pointer-events: none;}
+
 body {
   background-image: url('../img/bg-2331x1322-s.jpg');
   background-size: 100% 100%;
