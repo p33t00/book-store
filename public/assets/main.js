@@ -5,8 +5,10 @@ import * as data from '../../db.json'
 const db = data.default
 const card = {}
 
-window.onload = () => {
-  document.getElementById('staticBackdrop').addEventListener('show.bs.modal', event => {
+$(window).ready(() => {
+// window.onload = () => {
+  $('#staticBackdrop').on('show.bs.modal', event => {
+  // document.getElementById('staticBackdrop').addEventListener(
     const bookID = event.relatedTarget.parentNode.dataset.id
     const book = db.find(b => b.id == bookID)
     const dataID = document.querySelector('#single-item-modal')
@@ -26,7 +28,8 @@ window.onload = () => {
     categoryNode.innerText = book.category
   })
 
-  document.getElementById('content').innerHTML = db.map(b => {
+  $('#content').html(db.map(b => {
+  // document.getElementById('content').innerHTML = db.map(b => {
     return `<div class="item-list-card card col-auto mx-auto p-0 border border-0" data-id=${b.id}>
       <img src="${b.img}" class="card-img-top" data-bs-toggle="modal" data-bs-target="#staticBackdrop" alt="...">
       <ul class="list-group list-group-flush">
@@ -43,9 +46,10 @@ window.onload = () => {
         <span>$ ${b.price.toFixed(2)}</span>
       </div>
     </div>`
-  }).join('')
+  }).join(''))
 
-  document.getElementById('btn-card').addEventListener('click', () => {
+  $('#btn-card').click((event) => {
+  // document.getElementById('btn-card').addEventListener('click', () => {
     createCardNodes()
     addBadgeClickListener()
     setTotal()
@@ -75,7 +79,8 @@ window.onload = () => {
       </li>`
     }
 
-    document.getElementById('shopping-list').innerHTML = listItems
+    $('#shopping-list').html(listItems)
+    // document.getElementById('shopping-list').innerHTML = listItems
   }
 
   const addBadgeClickListener = () => {
@@ -116,4 +121,9 @@ window.onload = () => {
       delete card[b]
     }
   }
-}
+
+  $('.btn').click(event => {
+    $(event.target).animate({opacity: 0.25}, 200)
+    $(event.target).animate({opacity: 1}, 200)
+  });
+})
