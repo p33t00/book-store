@@ -2,18 +2,10 @@ import '../../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js'
 import '../../node_modules/jquery/dist/jquery.min.js'
 import * as data from '../../db.json'
 
-import _ from 'lodash'
-
 const db = data.default
-const card = []
-let cardDetailed = []
-
-// import javascriptLogo from './javascript.svg'
-// import { setupCounter } from './counter.js'
-// import bootstrap from 'bootstrap'
+const card = {}
 
 window.onload = () => {
-// $(document).ready(() => {
   document.getElementById('staticBackdrop').addEventListener('show.bs.modal', event => {
     const bookID = event.relatedTarget.parentNode.dataset.id
     const book = db.find(b => b.id == bookID)
@@ -34,7 +26,6 @@ window.onload = () => {
     categoryNode.innerText = book.category
   })
 
-
   document.getElementById('content').innerHTML = db.map(b => {
     return `<div class="item-list-card card col-auto mx-auto p-0 border border-0" data-id=${b.id}>
       <img src="${b.img}" class="card-img-top" data-bs-toggle="modal" data-bs-target="#staticBackdrop" alt="...">
@@ -49,7 +40,7 @@ window.onload = () => {
             <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zm3.915 10L3.102 4h10.796l-1.313 7h-8.17zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
           </svg>
         </button>
-        <span>$ ${b.price}</span>
+        <span>$ ${b.price.toFixed(2)}</span>
       </div>
     </div>`
   }).join('')
@@ -57,58 +48,72 @@ window.onload = () => {
   document.getElementById('btn-card').addEventListener('click', () => {
     createCardNodes()
     addBadgeClickListener()
-    // calcCardDetails()
-    setQuantity()
+    setTotal()
   })
 
   $('.btn-buy').click((event) => {
   // document.querySelectorAll('.btn-buy').forEach(btn => btn.addEventListener("click", event => {
-    card.push(Number(event.target.parentNode.parentNode.dataset.id))
-  })
-
-  $('#clear-card').click(() => {
-    card.length = 0
-    cardDetailed.length = 0
-    $('#shopping-list').html('')
+    const id = Number(event.target.parentNode.parentNode.dataset.id);
+    if (card[id] === undefined) { card[id] = db.find(b => (b.id === id)) }
+    card[id].qty++
   })
 
   const createCardNodes = () => {
-    document.getElementById('shopping-list').innerHTML = db.filter(b => card.indexOf(b.id) > -1).map(b => {
-      return `<li class="list-group-item text-start py-4" data-id=${b.id}>
+    let listItems = ''
+    for (const id in card) {
+      const b = card[id]
+      listItems += `<li class="list-group-item text-start py-4" data-id=${b.id}>
         <h5 class="fw-bold">${b.title}</h5>
         <div class="d-flex justify-content-between align-items-center">
           <div class="col-3"><img src="${b.img}" class="img-thumbnail" alt="..."></div>
           <ul class="col-8">
-            <li><span>23</span> &#215; <span>${b.price}</span></li>
-            <li>Total: $ <span>${b.price}</span></li>
+            <li><span>${b.qty}</span> &#215; <span>${b.price.toFixed(2)}</span></li>
+            <li>Total: $ <span>${(b.qty * b.price).toFixed(2)}</span></li>
           </ul>
           <span class="col-1 badge bg-danger rounded-pill">X</span>
         </div>
       </li>`
-    }).join('')
+    }
+
+    document.getElementById('shopping-list').innerHTML = listItems
   }
 
   const addBadgeClickListener = () => {
     $('.badge').click((event) => {
-      // TODO: FINISHED here
-      console.log(card)
       const parent = event.target.parentNode.parentNode
-      card.splice(card.indexOf(Number(parent.dataset.id)), 1)
+      // setting qty to 0 before delete, sice its a reference to db object
+      card[parent.dataset.id].qty = 0
+      // Deleting card item
+      delete card[parent.dataset.id]
       parent.remove()
-      setQuantity()
-      console.log(card)
-      console.log(cardDetailed)
+      setTotal()
     })
   }
 
-  const calcCardDetails = () => {
-    cardDetailed = _.countBy(card, Number)
+  const setTotal = () => {
+    let qty = 0
+    let total = 0
+
+    for (const b in card) {
+      qty += card[b].qty
+      total += card[b].price * card[b].qty
+    }
+
+    $('#qty').text(qty)
+    $('#total-price').text(total.toFixed(2))
   }
 
-  const setQuantity = () => {
-    calcCardDetails()
-    let a = _.reduce(cardDetailed, (acc, i) => (acc + i))
-    console.log(a)
-    $('#qty').text(a)
+  $('#clear-card').click(() => {
+    clearCard()
+    $('#shopping-list').html('')
+    $('#qty').text(0)
+    $('#total-price').text(0)    
+  })
+
+  const clearCard = () => { 
+    for (let b in card) {
+      card[b].qty = 0
+      delete card[b]
+    }
   }
 }

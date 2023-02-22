@@ -6,7 +6,8 @@
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     "category": "CSS",
     "price": 15.45,
-    "img": "https://booklovinmamas.com/wp-content/uploads/books/CSS/510GEALS69L._SY344_BO1%2C204%2C203%2C200_.jpg"
+    "img": "https://booklovinmamas.com/wp-content/uploads/books/CSS/510GEALS69L._SY344_BO1%2C204%2C203%2C200_.jpg",
+    "qty": 0
   },
   {
     "id": 2,
@@ -15,7 +16,8 @@
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
     "category": "HTML",
     "price": 18.99,
-    "img": "https://cssdeck.com/blog/wp-content/uploads/2015/03/must-read-html-css-books.jpg"
+    "img": "https://cssdeck.com/blog/wp-content/uploads/2015/03/must-read-html-css-books.jpg",
+    "qty": 0
   },
   {
     "id": 3,
@@ -24,7 +26,8 @@
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
     "category": "JavaScript",
     "price": 28.50,
-    "img": "http://1.bp.blogspot.com/-qfGBvnclXm0/Vh0a_E0i33I/AAAAAAAAD9Q/8x9cJWBF8GA/s1600/Speaking%2BJavaScript%2B-%2BFree%2Bbook%2BPDF.jpg"
+    "img": "http://1.bp.blogspot.com/-qfGBvnclXm0/Vh0a_E0i33I/AAAAAAAAD9Q/8x9cJWBF8GA/s1600/Speaking%2BJavaScript%2B-%2BFree%2Bbook%2BPDF.jpg",
+    "qty": 0
   },
   {
     "id": 4,
@@ -33,7 +36,8 @@
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     "category": "XU",
     "price": 25.50,
-    "img": "https://i.ebayimg.com/images/g/YG8AAOSwSRpZta48/s-l400.jpg"
+    "img": "https://i.ebayimg.com/images/g/YG8AAOSwSRpZta48/s-l400.jpg",
+    "qty": 0
   },
   {
     "id": 5,
@@ -42,7 +46,8 @@
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     "category": "CSS",
     "price": 15.45,
-    "img": "https://ketab.pk/wp-content/uploads/2021/05/IMG-20210525-WA0034-768x1030.jpg"
+    "img": "https://ketab.pk/wp-content/uploads/2021/05/IMG-20210525-WA0034-768x1030.jpg",
+    "qty": 0
   },
   {
     "id": 6,
@@ -51,7 +56,8 @@
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
     "category": "HTML",
     "price": 18.99,
-    "img": "https://i0.wp.com/sherrylwilson.com/wp-content/uploads/2016/01/HTML-Quickstart-Guide-Book-Review.jpg?resize=487%2C598&ssl=1"
+    "img": "https://i0.wp.com/sherrylwilson.com/wp-content/uploads/2016/01/HTML-Quickstart-Guide-Book-Review.jpg?resize=487%2C598&ssl=1",
+    "qty": 0
   },
   {
     "id": 7,
@@ -60,7 +66,8 @@
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
     "category": "JavaScript",
     "price": 28.50,
-    "img": "https://stackabuse.s3.amazonaws.com/media/best-javascript-books-for-all-skill-levels-7-13.jpg"
+    "img": "https://stackabuse.s3.amazonaws.com/media/best-javascript-books-for-all-skill-levels-7-13.jpg",
+    "qty": 0
   },
   {
     "id": 8,
@@ -69,7 +76,8 @@
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     "category": "XU",
     "price": 25.50,
-    "img": "https://i.pinimg.com/originals/2f/db/b4/2fdbb452b38b42282fffd60ba9e2bcb2.jpg"
+    "img": "https://i.pinimg.com/originals/2f/db/b4/2fdbb452b38b42282fffd60ba9e2bcb2.jpg",
+    "qty": 0
   },
   {
     "id": 9,
@@ -78,7 +86,8 @@
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     "category": "CSS",
     "price": 15.45,
-    "img": "https://ml3tegr94pkt.i.optimole.com/FyfRwSA-rr_VCcUq/w:476/h:785/q:80/https://www.webtopic.com/wp-content/uploads/2020/03/chrome_QyfPZDd7US.jpg"
+    "img": "https://ml3tegr94pkt.i.optimole.com/FyfRwSA-rr_VCcUq/w:476/h:785/q:80/https://www.webtopic.com/wp-content/uploads/2020/03/chrome_QyfPZDd7US.jpg",
+    "qty": 0
   },
   {
     "id": 10,
@@ -87,7 +96,8 @@
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
     "category": "HTML",
     "price": 18.99,
-    "img": "https://uploads-ssl.webflow.com/5f280c5b57d2edfcbbb057ea/60733555a7e371cfccf76927_51aYhJ4seCL.jpeg"
+    "img": "https://uploads-ssl.webflow.com/5f280c5b57d2edfcbbb057ea/60733555a7e371cfccf76927_51aYhJ4seCL.jpeg",
+    "qty": 0
   },
   {
     "id": 11,
@@ -96,7 +106,8 @@
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
     "category": "JavaScript",
     "price": 28.50,
-    "img": "https://wsvincent.com/assets/images/bestjavascriptbooks/ydkjs.jpg"
+    "img": "https://wsvincent.com/assets/images/bestjavascriptbooks/ydkjs.jpg",
+    "qty": 0
   },
   {
     "id": 12,
@@ -105,7 +116,8 @@
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     "category": "XU",
     "price": 25.50,
-    "img": "https://www.springboard.com/blog/wp-content/uploads/2016/05/969C7027-5641-68C1-29B3-CA2FFC78A0D9.jpg"
+    "img": "https://www.springboard.com/blog/wp-content/uploads/2016/05/969C7027-5641-68C1-29B3-CA2FFC78A0D9.jpg",
+    "qty": 0
   },
   {
     "id": 13,
@@ -114,7 +126,8 @@
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     "category": "CSS",
     "price": 15.45,
-    "img": "https://images-na.ssl-images-amazon.com/images/I/414zYx1SEoL.jpg"
+    "img": "https://images-na.ssl-images-amazon.com/images/I/414zYx1SEoL.jpg",
+    "qty": 0
   },
   {
     "id": 14,
@@ -123,7 +136,8 @@
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
     "category": "HTML",
     "price": 18.99,
-    "img": "https://trickbugs.com/wp-content/uploads/2017/05/842e9b3892002f6a4e17112232b56491-699x1081.png"
+    "img": "https://trickbugs.com/wp-content/uploads/2017/05/842e9b3892002f6a4e17112232b56491-699x1081.png",
+    "qty": 0
   },
   {
     "id": 15,
@@ -132,7 +146,8 @@
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
     "category": "JavaScript",
     "price": 28.50,
-    "img": "https://2.bp.blogspot.com/-rVMcHruLA2w/Uvef-g2rbZI/AAAAAAAAAEE/fFrvzkudSEU/s1600/Un.jpg"
+    "img": "https://2.bp.blogspot.com/-rVMcHruLA2w/Uvef-g2rbZI/AAAAAAAAAEE/fFrvzkudSEU/s1600/Un.jpg",
+    "qty": 0
   },
   {
     "id": 16,
@@ -141,7 +156,8 @@
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     "category": "XU",
     "price": 25.50,
-    "img": "https://i.pinimg.com/originals/a7/c9/eb/a7c9ebbd862317750f3918ed50241d56.jpg"
+    "img": "https://i.pinimg.com/originals/a7/c9/eb/a7c9ebbd862317750f3918ed50241d56.jpg",
+    "qty": 0
   },
   {
     "id": 17,
@@ -150,7 +166,8 @@
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     "category": "CSS",
     "price": 15.45,
-    "img": "https://cssdeck.com/blog/wp-content/uploads/2015/03/must-read-html-css-books9.jpg"
+    "img": "https://cssdeck.com/blog/wp-content/uploads/2015/03/must-read-html-css-books9.jpg",
+    "qty": 0
   },
   {
     "id": 18,
@@ -159,7 +176,8 @@
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
     "category": "HTML",
     "price": 18.99,
-    "img": "https://s.tmimgcdn.com/blog/wp-content/uploads/2011/01/Pro-HTML5-Programming-Powerful-APIs-for-Richer-Internet-Application-Development.jpg?x54449"
+    "img": "https://s.tmimgcdn.com/blog/wp-content/uploads/2011/01/Pro-HTML5-Programming-Powerful-APIs-for-Richer-Internet-Application-Development.jpg?x54449",
+    "qty": 0
   },
   {
     "id": 19,
@@ -168,7 +186,8 @@
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
     "category": "JavaScript",
     "price": 28.50,
-    "img": "http://1.bp.blogspot.com/-Ew8jMiveU00/UGqJS0dzh0I/AAAAAAAABUI/4nJjEyw-I_E/s1600/Pro+JavaScript+for+Web+Apps+PDF+Book.jpg"
+    "img": "http://1.bp.blogspot.com/-Ew8jMiveU00/UGqJS0dzh0I/AAAAAAAABUI/4nJjEyw-I_E/s1600/Pro+JavaScript+for+Web+Apps+PDF+Book.jpg",
+    "qty": 0
   },
   {
     "id": 20,
@@ -177,6 +196,7 @@
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
     "category": "XU",
     "price": 25.50,
-    "img": "https://miro.medium.com/max/1064/1*EUgDJ9lR_Bx6mutrzMH9Bg.png"
+    "img": "https://miro.medium.com/max/1064/1*EUgDJ9lR_Bx6mutrzMH9Bg.png",
+    "qty": 0
   }
 ]
