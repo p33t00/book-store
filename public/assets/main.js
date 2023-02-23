@@ -3,9 +3,29 @@ import '../../node_modules/jquery/dist/jquery.min.js'
 import * as data from '../../db.json'
 
 const db = data.default
+let contentState = db
 const card = {}
 
+let sortField = 'title'
+let sortAsc = true
+
 $(window).ready(() => {
+
+  const sortContent = (sortField, data, asc) => {
+    return data.sort(sortAlgo(sortField, asc))
+    // return data.sort(sortAuthorAsc)
+  }
+
+  const sortAlgo = (sortField, asc) => {
+    let ra = 1 
+    let rb = 1
+
+    if (asc) rb *= -1
+    else ra *= -1
+
+    return (a,b) => a[sortField] > b[sortField] ? ra : rb
+  }
+
 // window.onload = () => {
   $('#staticBackdrop').on('show.bs.modal', event => {
   // document.getElementById('staticBackdrop').addEventListener(
@@ -20,7 +40,7 @@ $(window).ready(() => {
     const categoryNode = document.querySelector('#single-item-modal .modal-body .list-group .modal-category-field')
 
     dataID.dataset.id = book.id
-    headerNode.innerText = book.price
+    headerNode.innerText = book.price.toFixed(2)
     imageNode.src = book.img
     titleNode.innerText = book.title
     textNode.innerText = book.description
@@ -28,25 +48,29 @@ $(window).ready(() => {
     categoryNode.innerText = book.category
   })
 
-  $('#content').html(db.map(b => {
-  // document.getElementById('content').innerHTML = db.map(b => {
-    return `<div class="item-list-card card col-auto mx-auto p-0 border border-0" data-id=${b.id}>
-      <img src="${b.img}" class="card-img-top" data-bs-toggle="modal" data-bs-target="#staticBackdrop" alt="...">
-      <ul class="list-group list-group-flush">
-        <li class="list-group-item">Author: <span>${b.author}</span></li>
-        <li class="list-group-item">Category: <span>${b.category}</span></li>
-      </ul>
-      <div class="pb-2 mt-auto">
-        <button class="btn btn-outline-success btn-buy col-2" type="button">
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-cart-plus" viewBox="0 0 16 16">
-            <path d="M9 5.5a.5.5 0 0 0-1 0V7H6.5a.5.5 0 0 0 0 1H8v1.5a.5.5 0 0 0 1 0V8h1.5a.5.5 0 0 0 0-1H9V5.5z"/>
-            <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zm3.915 10L3.102 4h10.796l-1.313 7h-8.17zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
-          </svg>
-        </button>
-        <span>$ ${b.price.toFixed(2)}</span>
-      </div>
-    </div>`
-  }).join(''))
+  const buildContentDOM = (data) => {
+    $('#content').html(data.map(b => {
+    // document.getElementById('content').innerHTML = db.map(b => {
+      return `<div class="item-list-card card col-auto mx-auto p-0 border border-0" data-id=${b.id}>
+        <img src="${b.img}" class="card-img-top" data-bs-toggle="modal" data-bs-target="#staticBackdrop" alt="...">
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">Author: <span>${b.author}</span></li>
+          <li class="list-group-item">Category: <span>${b.category}</span></li>
+        </ul>
+        <div class="pb-2 mt-auto">
+          <button class="btn btn-outline-success btn-buy col-2" type="button">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="currentColor" class="bi bi-cart-plus" viewBox="0 0 16 16">
+              <path d="M9 5.5a.5.5 0 0 0-1 0V7H6.5a.5.5 0 0 0 0 1H8v1.5a.5.5 0 0 0 1 0V8h1.5a.5.5 0 0 0 0-1H9V5.5z"/>
+              <path d="M.5 1a.5.5 0 0 0 0 1h1.11l.401 1.607 1.498 7.985A.5.5 0 0 0 4 12h1a2 2 0 1 0 0 4 2 2 0 0 0 0-4h7a2 2 0 1 0 0 4 2 2 0 0 0 0-4h1a.5.5 0 0 0 .491-.408l1.5-8A.5.5 0 0 0 14.5 3H2.89l-.405-1.621A.5.5 0 0 0 2 1H.5zm3.915 10L3.102 4h10.796l-1.313 7h-8.17zM6 14a1 1 0 1 1-2 0 1 1 0 0 1 2 0zm7 0a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
+            </svg>
+          </button>
+          <span>$ ${b.price.toFixed(2)}</span>
+        </div>
+      </div>`
+    }).join(''))
+  }
+
+  buildContentDOM(sortContent(sortField, contentState, sortAsc))
 
   $('#btn-card').click((event) => {
   // document.getElementById('btn-card').addEventListener('click', () => {
@@ -126,4 +150,27 @@ $(window).ready(() => {
     $(event.target).animate({opacity: 0.25}, 200)
     $(event.target).animate({opacity: 1}, 200)
   });
+
+  $('#category-select').change(event => {
+    const categoryFilterVal = event.target.value
+    contentState = categoryFilterVal === 'all' ? db : db.filter(i => i.category.toLowerCase() === categoryFilterVal)
+    contentState = sortContent(sortField, contentState, sortAsc)
+    buildContentDOM(contentState)
+  })
+
+  $('#sort-select').change(event => {
+    sortField = event.target.value
+    if (sortField === '') return;
+    contentState = sortContent(sortField, contentState, sortAsc)
+      console.log(contentState)
+    buildContentDOM(contentState)
+  })
+
+  $('#order-select').change(event => {
+    sortAsc = event.target.value === 'asc'
+    if (sortField === '') return;
+    contentState = sortContent(sortField, contentState, sortAsc)
+    console.log(contentState)
+    buildContentDOM(contentState)
+  })
 })
