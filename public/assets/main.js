@@ -1,36 +1,11 @@
 import '../../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js'
 import '../../node_modules/jquery/dist/jquery.min.js'
-import * as data from '../../db.json'
-
-const db = data.default
-let contentState = db
-const card = {}
-
-let sortField = 'title'
-let sortAsc = true
+import Store from '../../Store.js'
+import Card from '../../Card.js'
 
 $(window).ready(() => {
-
-  const sortContent = (sortField, data, asc) => {
-    return data.sort(sortAlgo(sortField, asc))
-    // return data.sort(sortAuthorAsc)
-  }
-
-  const sortAlgo = (sortField, asc) => {
-    let ra = 1 
-    let rb = 1
-
-    if (asc) rb *= -1
-    else ra *= -1
-
-    return (a,b) => a[sortField] > b[sortField] ? ra : rb
-  }
-
-// window.onload = () => {
   $('#staticBackdrop').on('show.bs.modal', event => {
-  // document.getElementById('staticBackdrop').addEventListener(
-    const bookID = event.relatedTarget.parentNode.dataset.id
-    const book = db.find(b => b.id == bookID)
+    const book = Store.getBook(event.relatedTarget.parentNode.dataset.id)
     const dataID = document.querySelector('#single-item-modal')
     const headerNode = document.querySelector('#single-item-modal .modal-header h2.modal-title span')
     const imageNode = document.querySelector('#single-item-modal .modal-body img')
@@ -50,7 +25,6 @@ $(window).ready(() => {
 
   const buildContentDOM = (data) => {
     $('#content').html(data.map(b => {
-    // document.getElementById('content').innerHTML = db.map(b => {
       return `<div class="item-list-card card col-auto mx-auto p-0 border border-0" data-id=${b.id}>
         <img src="${b.img}" class="card-img-top" data-bs-toggle="modal" data-bs-target="#staticBackdrop" alt="...">
         <ul class="list-group list-group-flush">
@@ -70,33 +44,35 @@ $(window).ready(() => {
     }).join(''))
   }
 
-  buildContentDOM(sortContent(sortField, contentState, sortAsc))
+  buildContentDOM(Store.getSortedContent())
 
   $('#btn-card').click((event) => {
-  // document.getElementById('btn-card').addEventListener('click', () => {
     createCardNodes()
     addBadgeClickListener()
     setTotal()
   })
 
   $('.btn-buy').click((event) => {
-  // document.querySelectorAll('.btn-buy').forEach(btn => btn.addEventListener("click", event => {
     const id = Number(event.target.parentNode.parentNode.dataset.id);
-    if (card[id] === undefined) { card[id] = db.find(b => (b.id === id)) }
-    card[id].qty++
+    if (!Card.get(id)) { Card.set(Store.getBook(id))}
+    // if (Card(id) === undefined) { card[id] = Store.getBook(id) }
+    Card.incrBookQty(id)
+    // card[id].qty++
   })
 
   const createCardNodes = () => {
     let listItems = ''
-    for (const id in card) {
-      const b = card[id]
-      listItems += `<li class="list-group-item text-start py-4" data-id=${b.id}>
-        <h5 class="fw-bold">${b.title}</h5>
+    for (const [k, book] of Card.getAll()) {
+    // for (const id in Card.getAll()) {
+    // for (const id in card) {
+      // const b = card[id]
+      listItems += `<li class="list-group-item text-start py-4" data-id=${book.id}>
+        <h5 class="fw-bold">${book.title}</h5>
         <div class="d-flex justify-content-between align-items-center">
-          <div class="col-3"><img src="${b.img}" class="img-thumbnail" alt="..."></div>
+          <div class="col-3"><img src="${book.img}" class="img-thumbnail" alt="..."></div>
           <ul class="col-8">
-            <li><span>${b.qty}</span> &#215; <span>${b.price.toFixed(2)}</span></li>
-            <li>Total: $ <span>${(b.qty * b.price).toFixed(2)}</span></li>
+            <li><span>${book.qty}</span> &#215; <span>${book.price.toFixed(2)}</span></li>
+            <li>Total: $ <span>${(book.qty * book.price).toFixed(2)}</span></li>
           </ul>
           <span class="col-1 badge bg-danger rounded-pill">X</span>
         </div>
@@ -104,16 +80,17 @@ $(window).ready(() => {
     }
 
     $('#shopping-list').html(listItems)
-    // document.getElementById('shopping-list').innerHTML = listItems
   }
 
   const addBadgeClickListener = () => {
     $('.badge').click((event) => {
       const parent = event.target.parentNode.parentNode
       // setting qty to 0 before delete, sice its a reference to db object
-      card[parent.dataset.id].qty = 0
+      Card.resetBookQty(parent.dataset.id)
+      // card[parent.dataset.id].qty = 0
       // Deleting card item
-      delete card[parent.dataset.id]
+      Card.deleteBook(parent.dataset.id)
+      // delete card[parent.dataset.id]
       parent.remove()
       setTotal()
     })
@@ -123,9 +100,9 @@ $(window).ready(() => {
     let qty = 0
     let total = 0
 
-    for (const b in card) {
-      qty += card[b].qty
-      total += card[b].price * card[b].qty
+    for (const [k, book] of Card.getAll()) {
+      qty += book.qty
+      total += book.price * book.qty
     }
 
     $('#qty').text(qty)
@@ -133,18 +110,11 @@ $(window).ready(() => {
   }
 
   $('#clear-card').click(() => {
-    clearCard()
+    Card.clearCard()
     $('#shopping-list').html('')
     $('#qty').text(0)
     $('#total-price').text(0)    
   })
-
-  const clearCard = () => { 
-    for (let b in card) {
-      card[b].qty = 0
-      delete card[b]
-    }
-  }
 
   $('.btn').click(event => {
     $(event.target).animate({opacity: 0.25}, 200)
@@ -152,25 +122,23 @@ $(window).ready(() => {
   });
 
   $('#category-select').change(event => {
-    const categoryFilterVal = event.target.value
-    contentState = categoryFilterVal === 'all' ? db : db.filter(i => i.category.toLowerCase() === categoryFilterVal)
-    contentState = sortContent(sortField, contentState, sortAsc)
-    buildContentDOM(contentState)
+    // const categoryFilterVal = event.target.value
+    // contentState = categoryFilterVal === 'all' ? db : db.filter(i => i.category.toLowerCase() === categoryFilterVal)
+    // contentState = sortContent(sortField, contentState, sortAsc)
+    Store.sortByCategory(event.target.value)
+    buildContentDOM(Store.getSortedContent())
   })
 
   $('#sort-select').change(event => {
-    sortField = event.target.value
-    if (sortField === '') return;
-    contentState = sortContent(sortField, contentState, sortAsc)
-      console.log(contentState)
-    buildContentDOM(contentState)
+    Store.setSortField(event.target.value)
+    // sortField = event.target.value
+    // contentState = sortContent(sortField, contentState, sortAsc)
+    buildContentDOM(Store.getSortedContent())
   })
 
   $('#order-select').change(event => {
-    sortAsc = event.target.value === 'asc'
-    if (sortField === '') return;
-    contentState = sortContent(sortField, contentState, sortAsc)
-    console.log(contentState)
-    buildContentDOM(contentState)
+    Store.setSortAsc(event.target.value === 'asc')
+    // contentState = sortContent(sortField, contentState, sortAsc)
+    buildContentDOM(Store.getSortedContent())
   })
 })
