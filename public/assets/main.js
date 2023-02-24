@@ -1,10 +1,9 @@
 import '../../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js'
-import '../../node_modules/jquery/dist/jquery.min.js'
 import Store from '../../Store.js'
 import Card from '../../Card.js'
 
-$(window).ready(() => {
-  $('#staticBackdrop').on('show.bs.modal', event => {
+window.onload = () => {
+  document.querySelector('#staticBackdrop').addEventListener('show.bs.modal', event => {
     const book = Store.getBook(event.relatedTarget.parentNode.dataset.id)
     const dataID = document.querySelector('#single-item-modal')
     const headerNode = document.querySelector('#single-item-modal .modal-header h2.modal-title span')
@@ -24,7 +23,7 @@ $(window).ready(() => {
   })
 
   const buildContentDOM = (data) => {
-    $('#content').html(data.map(b => {
+    document.querySelector('#content').innerHTML = data.map(b => {
       return `<div class="item-list-card card col-auto mx-auto p-0 border border-0" data-id=${b.id}>
         <img src="${b.img}" class="card-img-top" data-bs-toggle="modal" data-bs-target="#staticBackdrop" alt="...">
         <div class="pb-2 mt-auto">
@@ -41,22 +40,22 @@ $(window).ready(() => {
           <span>$ ${b.price.toFixed(2)}</span>
         </div>
       </div>`
-    }).join(''))
+    }).join('')
   }
 
   buildContentDOM(Store.getSortedContent())
 
-  $('#btn-card').click((event) => {
+  document.querySelector('#btn-card').addEventListener('click', event => {
     createCardNodes()
     addBadgeClickListener()
     setTotal()
   })
 
-  $('.btn-buy').click((event) => {
+  document.querySelectorAll('.btn-buy').forEach(btn => btn.addEventListener('click', event => {
     const id = Number(event.target.parentNode.parentNode.dataset.id);
     if (!Card.get(id)) { Card.set(Store.getBook(id))}
     Card.incrBookQty(id)
-  })
+  }))
 
   const createCardNodes = () => {
     let listItems = ''
@@ -74,11 +73,11 @@ $(window).ready(() => {
       </li>`
     }
 
-    $('#shopping-list').html(listItems)
+    document.querySelector('#shopping-list').innerHtml = listItems
   }
 
   const addBadgeClickListener = () => {
-    $('.badge').click((event) => {
+    document.querySelectorAll('.badge').forEach(b => b.addEventListener('click', () => {
       const parent = event.target.parentNode.parentNode
       // setting qty to 0 before delete, sice its a reference to db object
       Card.resetBookQty(parent.dataset.id)
@@ -86,7 +85,7 @@ $(window).ready(() => {
       Card.deleteBook(parent.dataset.id)
       parent.remove()
       setTotal()
-    })
+    }))
   }
 
   const setTotal = () => {
@@ -98,36 +97,29 @@ $(window).ready(() => {
       total += book.price * book.qty
     }
 
-    $('#qty').text(qty)
-    $('#total-price').text(total.toFixed(2))
+    document.querySelector('#qty').innerText = qty
+    document.querySelector('#total-price').innerText = total.toFixed(2)
   }
 
-  $('#clear-card').click(() => {
+  document.querySelector('#clear-card').addEventListener('click', () => {
     Card.clearCard()
-    $('#shopping-list').html('')
-    $('#qty').text(0)
-    $('#total-price').text(0)    
+    document.querySelector('#shopping-list').innerHtml =''
+    document.querySelector('#qty').innerText = 0
+    document.querySelector('#total-price').innerText =0    
   })
 
-  $('.btn').click(event => {
-    $(event.target).animate({opacity: 0.25}, 200)
-    $(event.target).animate({opacity: 1}, 200)
-  });
-
-  $('#category-select').change(event => {
+  document.querySelector('#category-select').addEventListener('change', event => {
     Store.sortByCategory(event.target.value)
     buildContentDOM(Store.getSortedContent())
   })
 
-  $('#sort-select').change(event => {
+  document.querySelector('#sort-select').addEventListener('change', event => {
     Store.setSortField(event.target.value)
     buildContentDOM(Store.getSortedContent())
   })
 
-  $('#order-select').change(event => {
+  document.querySelector('#order-select').addEventListener('change', event => {
     Store.setSortAsc(event.target.value === 'asc')
     buildContentDOM(Store.getSortedContent())
   })
-})
-
-
+}
