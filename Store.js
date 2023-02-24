@@ -11,7 +11,6 @@ const getBook = (bookID) => {
 
 const sortByCategory = (cat) => {
   contentState = cat === 'all' ? db : db.filter(i => i.category.toLowerCase() === cat)
-  // return contentState
 }
 
 const getSortedContent = () => sortContent(sortField, contentState, sortAsc)

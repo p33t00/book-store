@@ -13,7 +13,7 @@ const resetBookQty = (id) => {
 
 const incrBookQty = (id) => { card[id].qty++ }
 
-const deleteBook = () => { delete card[parent.dataset.id] }
+const deleteBook = (id) => { delete card[id] }
 
 const clearCard = () => {
 	for (let b in card) {
@@ -22,4 +22,4 @@ const clearCard = () => {
   }
 }
 
-export default { get, getAll, set, incrBookQty, resetBookQty, clearCard }
+export default { get, getAll, set, incrBookQty, resetBookQty, deleteBook, clearCard }

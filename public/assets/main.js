@@ -61,11 +61,12 @@ $(window).ready(() => {
   })
 
   const createCardNodes = () => {
+    const card = Card.getAll()
     let listItems = ''
-    for (const [k, book] of Card.getAll()) {
+    for (const [k, book] of Object.entries(Card.getAll())) {
     // for (const id in Card.getAll()) {
     // for (const id in card) {
-      // const b = card[id]
+      // const book = Card.get(id)
       listItems += `<li class="list-group-item text-start py-4" data-id=${book.id}>
         <h5 class="fw-bold">${book.title}</h5>
         <div class="d-flex justify-content-between align-items-center">
@@ -100,7 +101,7 @@ $(window).ready(() => {
     let qty = 0
     let total = 0
 
-    for (const [k, book] of Card.getAll()) {
+    for (const [k, book] of Object.entries(Card.getAll())) {
       qty += book.qty
       total += book.price * book.qty
     }
