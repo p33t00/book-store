@@ -13,7 +13,7 @@ body {
   background-attachment: fixed;
 }
 
-main {
+#main {
   background-color: rgba(0, 0, 0, 0.5);
   min-height: 100vh;
 }
@@ -24,9 +24,20 @@ main {
   }
 }
 
+.navbar-link:hover {
+  pointer-events: none;
+}
+
+.nav-link:hover {
+  pointer-events: none;
+}
+
+.navbar-link, .nav-link {
+  color: white;
+}
+
 .nav-item label{
   display: inline-block;
-  color: grey;
 }
 
 .navbar-toggler {
@@ -119,3 +130,6 @@ main {
 #single-item-modal .card-title {
   font-weight: bold;
 }
+
+
+/*transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out*/
