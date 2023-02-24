@@ -55,6 +55,7 @@ body {
   border-radius: 25px;
 }
 
+
 /* Item List */
 
 .card {
@@ -130,6 +131,3 @@ body {
 #single-item-modal .card-title {
   font-weight: bold;
 }
-
-
-/*transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out*/

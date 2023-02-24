@@ -73,7 +73,7 @@ window.onload = () => {
       </li>`
     }
 
-    document.querySelector('#shopping-list').innerHtml = listItems
+    document.querySelector('#shopping-list').innerHTML = listItems
   }
 
   const addBadgeClickListener = () => {
@@ -103,9 +103,9 @@ window.onload = () => {
 
   document.querySelector('#clear-card').addEventListener('click', () => {
     Card.clearCard()
-    document.querySelector('#shopping-list').innerHtml =''
+    document.querySelector('#shopping-list').innerHTML = ''
     document.querySelector('#qty').innerText = 0
-    document.querySelector('#total-price').innerText =0    
+    document.querySelector('#total-price').innerText = 0    
   })
 
   document.querySelector('#category-select').addEventListener('change', event => {
@@ -122,4 +122,12 @@ window.onload = () => {
     Store.setSortAsc(event.target.value === 'asc')
     buildContentDOM(Store.getSortedContent())
   })
+
+  document.querySelectorAll('.btn').forEach(btn => btn.addEventListener('click', event => {
+    event.target.style.backgroundColor = "#02A95B"
+    // original btn color: #198754
+    setTimeout(() => {
+      event.target.style.backgroundColor = null
+    }, 200)
+  }))
 }
