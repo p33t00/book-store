@@ -55,18 +55,12 @@ $(window).ready(() => {
   $('.btn-buy').click((event) => {
     const id = Number(event.target.parentNode.parentNode.dataset.id);
     if (!Card.get(id)) { Card.set(Store.getBook(id))}
-    // if (Card(id) === undefined) { card[id] = Store.getBook(id) }
     Card.incrBookQty(id)
-    // card[id].qty++
   })
 
   const createCardNodes = () => {
-    const card = Card.getAll()
     let listItems = ''
     for (const [k, book] of Object.entries(Card.getAll())) {
-    // for (const id in Card.getAll()) {
-    // for (const id in card) {
-      // const book = Card.get(id)
       listItems += `<li class="list-group-item text-start py-4" data-id=${book.id}>
         <h5 class="fw-bold">${book.title}</h5>
         <div class="d-flex justify-content-between align-items-center">
@@ -88,10 +82,8 @@ $(window).ready(() => {
       const parent = event.target.parentNode.parentNode
       // setting qty to 0 before delete, sice its a reference to db object
       Card.resetBookQty(parent.dataset.id)
-      // card[parent.dataset.id].qty = 0
       // Deleting card item
       Card.deleteBook(parent.dataset.id)
-      // delete card[parent.dataset.id]
       parent.remove()
       setTotal()
     })
@@ -123,23 +115,17 @@ $(window).ready(() => {
   });
 
   $('#category-select').change(event => {
-    // const categoryFilterVal = event.target.value
-    // contentState = categoryFilterVal === 'all' ? db : db.filter(i => i.category.toLowerCase() === categoryFilterVal)
-    // contentState = sortContent(sortField, contentState, sortAsc)
     Store.sortByCategory(event.target.value)
     buildContentDOM(Store.getSortedContent())
   })
 
   $('#sort-select').change(event => {
     Store.setSortField(event.target.value)
-    // sortField = event.target.value
-    // contentState = sortContent(sortField, contentState, sortAsc)
     buildContentDOM(Store.getSortedContent())
   })
 
   $('#order-select').change(event => {
     Store.setSortAsc(event.target.value === 'asc')
-    // contentState = sortContent(sortField, contentState, sortAsc)
     buildContentDOM(Store.getSortedContent())
   })
 })
