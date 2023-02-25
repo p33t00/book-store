@@ -1,9 +1,9 @@
 [
   {
     "id": 1,
-    "title": "Learn CSS in one day.",
+    "title": "CSS - an introduction",
     "author": "Johnson Harsht",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
+    "description": "CSS stands for Cascading Style Sheets.\nThese style sheets are ment to define positioning, look and to some extent behavior of HTML elements on the page. There are many ways in which a website can be styled with:\n• background manipulation\n• defining on hover behavior of elements\n• text color, size and overflow behavior\n• styling of a specific elements (first, last or any <li> in a list)\n• and much more...\n\nShould admit that a website wont have a commercial feel and look without any styling. Despite that, there are informational sites which dont seem to use any styling, which is ok if structure is very simple. But nowadays its impossible to get away from using styling if you are building corporate or commercial or even a personal website.\n\nCSS has a wide variety of selectors which are used to choose the element or group of elements that will be styled. With this in place, we get a fine grained control of the look on the page.\n\nTo some extend, there is a way to style a page directly in HTML layout by using <style> tag. But the author, most likely, will endup with a spagetty code, which will be very difficult to read and fix in case of need. With CSS, styles can be nicely structured in a separate files which can apply up tu multiple pages of the website.\n\nWith help of CSS it's possible to do some animations which will give more user friendly and responsive look. Talking about responsiveness. CSS lets us adapt our project to any screen that is out there. Whether it's a phone, tablet, monitor or tv, the layout can be arranged to look good and still provide best user experience by being comfortably usable.",
     "category": "CSS",
     "price": 15.45,
     "img": "https://images.unsplash.com/photo-1588666309990-d68f08e3d4a6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=685&q=80",
@@ -11,29 +11,29 @@
   },
   {
     "id": 2,
-    "title": "The Truth about HTML5",
+    "title": "HTML - an introduction",
     "author": "Luke Stevens",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
+    "description": "HTML stands for Hyper Text Markup Language. It uses tags to define elements of a web page.\nThere are many HTML tags out there and each one is responsible and used for different pueposes. Some tags are considered \"meta tags\" and used for providing information about the website (lang tag) or reference to sources as javascript or css files which our website uses.\nExamples of meta tags can be <meta>, <link>, <script> and other.\n\nAnother type of HTML elements are content tags.\nThese are responsible for holding the content parts of the website.\nThere can be different kind of content on the web, starting from plain text and ending with streaming video or audio. And yes, the rich HTML has tags to hold any of these content types.\nExamples of content tags are <p>, <h1>, <img>, <video>, <audio>\n\nNext important element group is layout tags. These tags are used to group content elements.\nManipulating the look or behavior of the group is much simpler and uses less ammount of code.\nEach tag is used to be a \"container\" for a specific part of the website. <div> tag should be used when scope of the content is outside of predefined \"container\" tags. That is, if you can't find the right tag to hold your content, than use <div>.\nExamples of \"container\" tags are: <section>, <div>, <footer>",
     "category": "HTML",
     "price": 18.99,
-    "img": "https://images.unsplash.com/photo-1506880018603-83d5b814b5a6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzB8fGJvb2t8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60",
+    "img": "https://images.unsplash.com/photo-1541963463532-d68292c34b19?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8Ym9va3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60",
     "qty": 0
   },
   {
     "id": 3,
-    "title": "Speaking JavaScript",
+    "title": "JavaScript - an introduction",
     "author": "Alex Rauschmayer",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
+    "description": "Javascript is a scripting language which initially was used only in browser to help making websites more interractive. It has been quiet a while before javascript runtime environment was developed. But for some time already many servers out there are running NodeJS and who would have thought that javascript would be a fully supported backend language ?\nNowadays one can even build a mobile applications, not to mention Raspberry Pi programs. Its good to know the possibilities in order to get inspired before learning.\n\nAfter release of javascript ES5, things start to change signifficantly. Specialy with performance which had a great impact on execution time. Talking about V8 engine introduced in Chrome browsers and in Node environment.\n\nJavascript is a language like any other when it comes to syntax. It has its own implementation of classes and objects which resemble JSON objects. Therefore can directly be used from json without any additional manipulations. And it makes work with JSON convenient, since JSON is one of mostly used standards of transmission of data over HTTP.\nWhat does make it different from some languages out there is that its does not really compiled. V8 uses JIT - just in time compilation, which is a compilation of some code snippets that will be used later on. Beside that, its a scripting type of language.\n\nAnother thing to mention is that javascript is not a strong typed language. With that, some objections may appear from developers who have Java or C background. But this can be easily fixed by using TypeScript which enforces data types in javascript.\n\nAsyncroneous operations are handled pretty easy, specially with latest async/await constructs.\nException handling is of standard type.",
     "category": "JavaScript",
     "price": 28.50,
-    "img": "https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mjh8fGJvb2t8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60",
+    "img": "https://images.unsplash.com/photo-1596802186605-f669500e7e2b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NDZ8fGJvb2t8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60",
     "qty": 0
   },
   {
     "id": 4,
-    "title": "UX Design and usability",
+    "title": "Responsive design with Bootstrap",
     "author": "Emrah Yayici",
-    "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    "description": "Bootstrap is a great combination of javascript and css which simplifies process of responsive web development. This frontend framework provides css class ready solutions for most common development tasks. A good example is a navigation menu. A set of classes and javascript functionality which can be implemented as easy as copy from Bootstrap website and paste into your project. Additional bonus is that this menu will adapt to any screen size and will shrink into expendable menu with hamburger button on small screen devices.\n\nBootstrap is fool of responsive and adaptable classes which can be used for free. The soures can be used directly from your project or downloaded by the client from CDN.\n\nThe default styling gives a stylish look and at least 2 types of \"themes\" white and dark. But if this is not enough, element behavior or the look can be easily overwritten with plain CSS. If we need further optimization or more fine grained control over the framework, SCSS can be used. For example, Bootstrap default variables can be easily overriden to needed values.\n\nBootstrap column layout system lets easily devide the content on thepage the way it's needed. The best part of bootstrap layout is that it can change size and positioning depending on the screen size.\n\nAs mentioned before, Bootstrab has a great variety of components, helpers, layouts and ready styled HTML elements like forms, menus, product cards, popups and much more which are perfectly documented and supplied with examples which are ready to use or easy to customize to suit the needs of a project.",
     "category": "XU",
     "price": 25.50,
     "img": "https://images.unsplash.com/photo-1614849963640-9cc74b2a826f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mzl8fGJvb2t8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60",
@@ -146,7 +146,7 @@
     "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.",
     "category": "JavaScript",
     "price": 32.55,
-    "img": "https://images.unsplash.com/photo-1587734459056-c0155b92d9a6?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTE5fHxib29rfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
+    "img": "https://images.unsplash.com/photo-1591925323311-cd864ae1740b?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTg2fHxib29rfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=500&q=60",
     "qty": 0
   },
   {
