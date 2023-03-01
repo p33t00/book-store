@@ -1,0 +1,19 @@
+<div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel">
+  <div class="offcanvas-header bg-dark bg-gradient">
+    <h5 class="offcanvas-title text-white" id="offcanvasRightLabel">Shopping List:</h5>
+    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body p-0">
+    <div class="clearfix">
+      <h4 class="ms-3 float-start">Quantity: <span id="qty">0</span><h4>
+      <h4 class="me-3 float-end">Total: $<span id="total-price">0</span></h4>
+    </div>
+    <hr class="m-1">
+    <hr class="m-1">
+    <ul id="shopping-list" class="list-group list-group-flush px-3"></ul>
+    <div class="fixed-bottom bg-dark bg-gradient py-3">
+      <button class="btn btn-success me-5">Order</button>
+      <button id="clear-card" class="btn btn-danger">Remove All</button>
+    </div>
+  </div>
+</div>
